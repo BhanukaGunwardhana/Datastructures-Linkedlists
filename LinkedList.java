@@ -219,7 +219,8 @@ public class LinkedList <T>{
         Node kth=first;
         Node moving=first.getNext();
         Node finalNode=first;
-
+        if(first!=null ){
+            if(first.equals(last)){System.out.println("List has one element");return null;}
         int i=1;
         while (i<=k){
             finalNode=moving;
@@ -235,6 +236,14 @@ public class LinkedList <T>{
             kth=kth.getNext();
         }
         return null;
+
+
+        }else{
+            System.out.println("Empty list");
+            return null;
+        }
+
+        
 
     }
 
